@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>What Now?</title>
+    <meta name="description" content="A web application for task management and productivity">
+    <meta name="author" content="Megan Englert">
+    <link type="text/css" rel="stylesheet" href="homepage.css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Space-Mono" rel="stylesheet">
+</head>
+
+<body>
+    <h1>What Now?</h1>
+    <div id="music">
+        <audio id="rhythmtest" autoplay controls>
+            <source src="media/rhythmtest.mp3" type="audio/mpeg">
+            Audio not supported :(
+        </audio>
+        <label for="rhythmtest">Music from <em>Rhythm Heaven Fever</em></label>
+    </div>
+    <br>
+    <div id="add">
+        <h2>Add a task here:</h1>
+            <form>
+                <section id="name">
+                    <label for="task-name"><strong>Task description:</strong></label>
+                    <input type="text" name="task-name" id="task-name">
+                </section>
+                <section id="date">
+                    <label for="due-date"><strong>Due date:</strong></label>
+                    <input type="date" name="due-date" id="due-date">
+                </section>
+                <section id="priority">
+                    <label for="prio"><strong>Priority:</strong></label>
+                    <input type="range" id="prio" name="prio" step="1" min="1" max="5">
+                </section>
+                <section id="tags">
+                    <strong>Add tags:</strong>
+                    <br>
+                    Location:
+                    <input type="checkbox" id="at-home" name="at-home">
+                    <label for="at-home">At home</label>
+                    <input type="checkbox" id="out" name="out">
+                    <label for="out">Out and about</label>
+                    <br>
+                    Category:
+                    <input type="checkbox" id="work" name="work">
+                    <label for="work">Work</label>
+                    <input type="checkbox" id="house" name="house">
+                    <label for="house">Housework</label>
+                    <input type="checkbox" id="self" name="self">
+                    <label for="self">Self care</label>
+                    <input type="checkbox" id="other" name="other">
+                    <label for="other">Other</label>
+                    <br>
+                    Focus level:
+                    <input type="checkbox" id="low-focus" name="low-focus">
+                    <label for="low-focus">Low</label>
+                    <input type="checkbox" id="med-focus" name="med-focus">
+                    <label for="med-focus">Medium</label>
+                    <input type="checkbox" id="high-focus" name="high-focus">
+                    <label for="high-focus">High</label>
+                </section>
+                <section id="submit">
+                    <input type="submit" value="Add Task">
+                </section>
+            </form>
+    </div>
+    <br>
+    <div id="task-list">
+        <table id="tasks">
+            
+        </table>
+    </div>
+
+    <div id="links">
+        <button onclick="window.location.href='./changelog.html';">
+        Go to my bus ride changelog!
+        <button onclick="window.location.href='https://meganenglert.github.io/CISC275/';">
+        Go to my portfolio!
+        </button>
+    </button>
+    </div>
+</body>
+
+</html>

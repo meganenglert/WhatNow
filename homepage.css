@@ -1,0 +1,33 @@
+
+body {
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Muli", sans-serif;
+    color: cornsilk;
+    text-align: left;
+    background-color: darkolivegreen;
+}
+h1 {
+    font-size: 1.8em;
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    color: cornsilk;
+    text-align: center;
+}
+
+div#add {
+    background-color: cornsilk;
+    height: 250px;
+    width: 450px;
+    color: darkslategray;
+    text-align: center;
+    padding: 25px 25px 25px 25px;
+    /* places box in the middle of the page */
+    margin:0 auto;
+}
+
+div#music {
+    margin:0 auto;
+    text-align:center;
+    vertical-align: center;
+}

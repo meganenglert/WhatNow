@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>What Now? | Bus Ride Changelog</title>
+    <meta name="description" content="Here is the stuff I did on a busride to Selbyville without internet!">
+    <meta name="author" content="Megan Englert">
+    <link type="text/css" rel="stylesheet" href="changelog.css" media="screen">
+</head>
+
+<body>
+    <h1>I'm stuck on a bus!</h1>
+
+    <audio autoplay controls>
+        <source src="media/menu.mp3" type="audio/mpeg">
+        Audio not supported :(
+    </audio>
+
+    <p>I am on a bus with no internet (no, I do not have a hotspot), so here are my changes and the sources I used.
+        Click on the buttons to view the code at different stages whenever I remembered to paste it in here.</p>
+
+    <div name="firstcheck">
+        <h2>First Check In - 11:26am</h2>
+
+        <p>I just realized I should be logging changes, so here I am. So far, I've made a form and put a few fields in
+            it, but I currently have no clue how to use those fields.</p>
+
+        <p>I am going to do my best to correctly type in links. I can only access Google from my phone so I am manually
+            typing the addresses into the anchor tag, and since I don't have internet, I don't actually have a way to
+            check that they're right. Please email me menglert@udel.edu if there are any broken links.</p>
+
+        <p>I learned to do the Hide/Show thing for the code at <a
+                href="https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp">W3 Schools</a>.</p>
+
+        <p><strong>So far today, I have done the following:</strong></p>
+        <ul>
+            <li>Created homepage.html and changelog.html.</li>
+            <li>Created form element and provided fields for task description, due date, and the base selection of tags.
+            </li>
+            <li>Learned how to embed audio in a page and autoplay it. Rhythm Heaven music is currently my only worldly
+                comfort while trapped in this metal can traveling to southern Delaware.</li>
+            <li>Figured out how to do the toggle thing! Which involves using JavaScript! wow!</li>
+        </ul>
+        <button onclick="firstUpdate()">See code!</button>
+
+        <xmp id="update1">
+            <!DOCTYPE html>
+            <html>
+
+            <head>
+                <title>What Now?</title>
+                <meta name="description" content="A web application for task management and productivity">
+                <meta name="author" content="Megan Englert">
+            </head>
+
+            <body>
+                <h1>What Now?</h1>
+                <audio autoplay controls>
+                    <source src="rhythmtest.mp3" type="audio/mpeg">
+                    Audio not supported :(
+                </audio>
+                <div name="add">
+                    <h2>Add a task here:</h1>
+                        <form>
+                            <section>
+                                <label for="task-name"><strong>Task description:</strong></label>
+                                <input type="text" name="task-name" id="task-name">
+                            </section>
+                            <section>
+                                <label for="due-date"><strong>Due date:</strong></label>
+                                <input type="date" name="due-date" id="due-date">
+                            </section>
+                            <strong>Add tags:</strong>
+                            <br>
+                            Location:
+                            <input type="checkbox" id="at-home" name="at-home">
+                            <label for="at-home">At home</label>
+                            <input type="checkbox" id="out" name="out">
+                            <label for="out">Out and about</label>
+                            <br>
+                            Category:
+                            <input type="checkbox" id="work" name="work">
+                            <label for="work">Work</label>
+                            <input type="checkbox" id="house" name="house">
+                            <label for="house">Housework</label>
+                            <input type="checkbox" id="self" name="self">
+                            <label for="self">Self care</label>
+                            <input type="checkbox" id="other" name="other">
+                            <label for="other">Other</label>
+                            <br>
+                            Focus level:
+                            <input type="checkbox" id="low-focus" name="low-focus">
+                            <label for="low-focus">Low</label>
+                            <input type="checkbox" id="med-focus" name="med-focus">
+                            <label for="med-focus">Medium</label>
+                            <input type="checkbox" id="high-focus" name="high-focus">
+                            <label for="high-focus">High</label>
+
+                        </form>
+                </div>
+                <a href="./changelog.html">View my changes made without internet on a bus ride to Selbyville!</a>
+                <a href="https://meganenglert.github.io/CISC275/">Go back to my portfolio homepage!</a>
+            </body>
+
+            </html>
+        </xmp>
+
+        <script>
+            function firstUpdate() {
+                var x = document.getElementById("update1");
+                if (x.style.display == "none") {
+                    x.style.display = "block";
+                }
+                else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+    </div>
+
+    <div name="secondcheck">
+        <h2>CSS! - 12:14pm</h2>
+        <p>This page now has a style sheet :o! Find it in changelog.css! Other than making the page look pretty, I am on
+            a quest to figure out how to make the code blocks hidden by default instead of showing by default.</p>
+
+        <p>I am loosely following <a href="https://www.washington.edu/accesscomputing/webd2/student/unit3">this tutorial
+                from Washington.edu</a>, especially the sections on setting up the stylesheet and using IDs and classes.
+            Then, in Unit 5, it explains how to show and hide text with scripting.</p>
+
+    </div>
+
+    <div name="thirdcheck">
+        <h2>Back on the bus literally just to wait to rehearse - 3:47pm</h2>
+
+        <p>I am trying to use the <a href="https://fonts.googleapis.com/css">Google Fonts API</a> to get some nice fonts
+            in my stylesheet, and I do not know why it isn't working. Here's what I tried: </p>
+
+        <button onclick="thirdUpdate()">See code!</button>
+        <section id="update3">
+            <p>Within the
+            <code>head</code> of
+            <code>homepage.html</code>:
+            <xmp>
+                <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+            </xmp>
+            </p>
+
+            <p>Within
+            <code>homepage.css</code>:
+            <xmp>
+                body {
+                font-size: 1em;
+                font-weight: normal;
+                font-family: "Tangerine", serif;
+                color: cornsilk;
+                text-align: left;
+                background-color: darkolivegreen;
+                }
+            </xmp>
+            </p>
+        </section>
+        <script>
+            function thirdUpdate() {
+                var x = document.getElementById("update3");
+                if (x.style.display == "none") {
+                    x.style.display = "block";
+                }
+                else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+    </div>
+    
+    <div name="fourthcheck">
+        <h2>Waiting to get on our way - 9:13pm</h2>
+
+        <p>So... I realized that I am a fool. My Google fonts weren't working because I do not have internet... yeah :( </p>
+
+
+    </div>
+
+    <div name="fifthcheck">
+        <h2>Some nicer formatting, button links - 10:09pm</h2>
+
+        <p>I spent some more time getting this page looking at least a little less terrible. I centered.. pretty much everything because I like how things look when they are centered.</p>
+
+        <p>Here is what my website looks like at this point:</p>
+        <img src="media/update5.png">
+
+        <p>I did have some trouble with trying to put the label for the audio player in the correct spot. I really want the text to be vertically centered with the player. Here is how it looks currently:</p>
+
+        <img src="media/audioformat.png">
+
+        <p>Anyway, here's my code: </p>
+
+        <button onClick="fifthHTML()">View HTML</button>
+        <xmp id="html5">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>What Now?</title>
+    <meta name="description" content="A web application for task management and productivity">
+    <meta name="author" content="Megan Englert">
+    <link type="text/css" rel="stylesheet" href="homepage.css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Space-Mono" rel="stylesheet">
+</head>
+
+<body>
+    <h1>What Now?</h1>
+    <div id="music">
+        <audio id="rhythmtest" autoplay controls>
+            <source src="media/rhythmtest.mp3" type="audio/mpeg">
+            Audio not supported :(
+        </audio>
+        <label for="rhythmtest">Music from <em>Rhythm Heaven Fever</em></label>
+    </div>
+    <br>
+    <div id="add">
+        <h2>Add a task here:</h1>
+            <form>
+                <section id="name">
+                    <label for="task-name"><strong>Task description:</strong></label>
+                    <input type="text" name="task-name" id="task-name">
+                </section>
+                <section id="date">
+                    <label for="due-date"><strong>Due date:</strong></label>
+                    <input type="date" name="due-date" id="due-date">
+                </section>
+                <section id="priority">
+                    <label for="prio"><strong>Priority:</strong></label>
+                    <input type="range" id="prio" name="prio" step="1" min="1" max="5">
+                </section>
+                <section id="tags">
+                    <strong>Add tags:</strong>
+                    <br>
+                    Location:
+                    <input type="checkbox" id="at-home" name="at-home">
+                    <label for="at-home">At home</label>
+                    <input type="checkbox" id="out" name="out">
+                    <label for="out">Out and about</label>
+                    <br>
+                    Category:
+                    <input type="checkbox" id="work" name="work">
+                    <label for="work">Work</label>
+                    <input type="checkbox" id="house" name="house">
+                    <label for="house">Housework</label>
+                    <input type="checkbox" id="self" name="self">
+                    <label for="self">Self care</label>
+                    <input type="checkbox" id="other" name="other">
+                    <label for="other">Other</label>
+                    <br>
+                    Focus level:
+                    <input type="checkbox" id="low-focus" name="low-focus">
+                    <label for="low-focus">Low</label>
+                    <input type="checkbox" id="med-focus" name="med-focus">
+                    <label for="med-focus">Medium</label>
+                    <input type="checkbox" id="high-focus" name="high-focus">
+                    <label for="high-focus">High</label>
+                </section>
+                <section id="submit">
+                    <input type="submit" value="Add Task">
+                </section>
+            </form>
+    </div>
+    <br>
+    <div id="task-list">
+
+    </div>
+
+    <div id="links">
+        <button onclick="window.location.href='./changelog.html';">
+        Go to my bus ride changelog!
+        <button onclick="window.location.href='https://meganenglert.github.io/CISC275/';">
+        Go to my portfolio!
+        </button>
+    </button>
+    </div>
+</body>
+
+</html>
+        </xmp>
+        <br>
+        <button onClick="fifthCSS()">View CSS</button>
+        <xmp id="css5">
+            body {
+                font-size: 1em;
+                font-weight: normal;
+                font-family: "Muli", sans-serif;
+                color: cornsilk;
+                text-align: left;
+                background-color: darkolivegreen;
+            }
+            h1 {
+                font-size: 1.8em;
+                font-family: "Space Mono", monospace;
+                font-weight: bold;
+                color: cornsilk;
+                text-align: center;
+            }
+            
+            div#add {
+                background-color: cornsilk;
+                height: 250px;
+                width: 450px;
+                color: darkslategray;
+                text-align: center;
+                padding: 25px 25px 25px 25px;
+                /* places box in the middle of the page */
+                margin:0 auto;
+            }
+            
+            div#music {
+                margin:0 auto;
+                text-align:center;
+                vertical-align: center;
+            }
+        </xmp>
+
+        <script>
+            function fifthHTML() {
+                var x = document.getElementById("html5");
+                if (x.style.display == "none") {
+                    x.style.display = "block";
+                }
+                else {
+                    x.style.display = "none";
+                }
+            }
+            function fifthCSS() {
+                var x = document.getElementById("css5");
+                if (x.style.display == "none") {
+                    x.style.display = "block";
+                }
+                else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+    </div>
+
+    <h2>Alright, I am now totally exhausted and going to stop for the night!</h2>
+</body>
+
+</html>
